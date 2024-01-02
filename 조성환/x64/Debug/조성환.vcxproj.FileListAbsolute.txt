@@ -1,2 +1,3 @@
 C:\CookC\조성환\x64\Debug\조성환.exe
 C:\Users\u\source\repos\조성환\x64\Debug\조성환.exe
+C:\Users\c407\Desktop\조성환\x64\Debug\조성환.exe
