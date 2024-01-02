@@ -1,35 +1,36 @@
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
+ï»¿#include <iostream>
+#include <string>
 using namespace std;
-int rand(void)
-{
-
-}
-int main()
-{
-	char user;
-	int computer, user_hand, arr[10];
-	int i;
-	for (;;)
-	{
-	for (i = 0; i < 3; ++i)
-		{
-			cout << "¹«¾ùÀ» ³»°Ú½À´Ï±î? : ";
-			cin >> hand;
-			cout << endl;
-			if (user == '°¡À§')
-				user_hand = -1;
-			else if (user == '¹ÙÀ§')
-				user_hand = 0;
-			else if (user == 'º¸')
-				user_hand = 1;
-			else
-			{
-				cout << "°¡À§, ¹ÙÀ§, º¸ Áß¿¡¼­ ÇÏ³ª¸¦ ³»½Ê½Ã¿À. (Ã³À½ºÎÅÍ ´Ù½ÃÇÕ´Ï´Ù.)" << endl;
-				break;
-			}
-		}	
+int main() {
+	string Computer;
+	cout << "Computer>>";
+	cin >> Computer;
+	string You;
+	cout << "You>>";
+	cin >> You;
+	if (Computer == "ê°€ìœ„") {
+		if (You == "ë³´")
+			cout << "ì»´í“¨í„°ê°€ ì´ê²¼ìŠµë‹ˆë‹¤." << endl;
+		else if (You == "ê°€ìœ„")
+			cout << "ë¹„ê²¼ìŠµë‹ˆë‹¤." << endl;
+		else if (You == "ë°”ìœ„")
+			cout << "ë‹¹ì‹ ì´ ì´ê²¼ìŠµë‹ˆë‹¤." << endl;
 	}
-	return 0;
+	else if (Computer == "ë³´") {
+		if (You == "ë°”ìœ„")
+			cout << "ì»´í“¨í„°ê°€ ì´ê²¼ìŠµë‹ˆë‹¤." << endl;
+		else if (You == "ë³´")
+			cout << "ë¹„ê²¼ìŠµë‹ˆë‹¤." << endl;
+		else if (You == "ê°€ìœ„")
+			cout << "ë‹¹ì‹ ì´ ì´ê²¼ìŠµë‹ˆë‹¤." << endl;
+	}
+	else if (Computer == "ë°”ìœ„") {
+		if (You == "ê°€ìœ„")
+			cout << "ì»´í“¨í„°ê°€ ì´ê²¼ìŠµë‹ˆë‹¤." << endl;
+		else if (You == "ë°”ìœ„")
+			cout << "ë¹„ê²¼ìŠµë‹ˆë‹¤." << endl;
+		else if (You == "ë³´")
+			cout << "ë‹¹ì‹ ì´ ì´ê²¼ìŠµë‹ˆë‹¤." << endl;
+	}
+
 }
