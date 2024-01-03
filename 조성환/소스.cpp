@@ -1,40 +1,54 @@
 ﻿#include <iostream>
 #include <string>
 using namespace std;
-string Input_Hand_Data()
-{ string Hand = ""; cin >> Hand; return Hand; }
-string RSP(string Computer, string You)
+int Input_Hand_Data(string user)
 {
-	int i = 0, j = 0;
-	if (Computer == "가위") {
-		if (You == "보") {++i; cout << "패배..!" << endl; return "Computer";}
-		else if (You == "가위") {cout << "무승부..!" << endl; return "Draw";}
-		else if (You == "바위") {++j; cout << "승리..!" << endl; return "User";}
+	int choice;
+	cout << user << ": ";
+	cin >> choice;
+	return choice;
+}
+int RSP(int Com, int You)
+{
+	int result = 0;
+
+	for (int i = 0; i < 3; ++i) {
+		if (i == 2) i = 0;
+		if (You == Com) result = 0;
+		else if (You < Com || Com != 2 || (You == 2 && Com == 0)) result = -1;
+		else result = 1;
 	}
-	else if (Computer == "보") {
-		if (You == "바위") {++i; cout << "패배..!" << endl; return "Computer";}
-		else if (You == "보") {cout << "무승부..!" << endl; return "Draw";}
-		else if (You == "가위") {++j; cout << "승리..!" << endl; return "User";}
+
+	return result;
+}
+int WOL(int& Pc, int& User, int result)
+{
+	int i = 1;
+	if (result == -1) {
+		++Pc;
+		cout << "컴퓨터 승" << endl;
 	}
-	else if (Computer == "바위") {
-		if (You == "가위") {++i; cout << "패배..!" << endl; return "Computer";}
-		else if (You == "바위") {cout << "무승부..!" << endl; return "Draw";}
-		else if (You == "보") {++j; cout << "승리..!" << endl; return "User";}
+	else if (result == 1) {
+		++User;
+		cout << "플레이어 승" << endl;
 	}
-	else cout << "컴퓨터는 잘못된 것을 냈다..!" << endl; return "오류";
+	else if (result == 0)
+		cout << "비겼다..!" << endl;
+	if (Pc == 3 || User == 3)
+	{
+		if (Pc == 3)	cout << "컴퓨터 최종 승" << endl;
+		else			cout << "플레이어 최종 승" << endl;
+		return i = 0;
+	}
 }
 int main() {
-	int i = 0, j = 0, Pc = 0, User = 0, score = 0, Swap; string Computer = "", You = "", result;
-	cout << "총 3번의 판! 가위 바위 보!" << endl;
-	for (;;)
+	int i = 1, Pc = 0, User = 0, result = 0, Com = 0, You = 0;
+	cout << "가위 : 1, 바위 : 2, 보 : 3!" << endl;
+	while (i)
 	{
-		cout << "첫번째 차례는 컴퓨터..!" << endl << "두번째 차례는 당신..!" << endl;
-		for (Swap = 0; Swap < 2; ++Swap) { cout << "무엇을 낼까..? "; if (Swap == 0) { Computer = Input_Hand_Data(); } else { You = Input_Hand_Data(); } }
-		result = RSP(Computer, You);
-		if (result == "Computer") Pc += 1; else if (result == "Draw") continue; else if (result == "User") User += 1; else cout << "결과가 오류가 나왔다.";
-		if (Pc == 3 || (Pc == 2 && User == 0)) break; else if (User == 3 || (Pc == 0 && User == 2)) break; else continue;
+		Com = Input_Hand_Data("컴퓨터");
+		You = Input_Hand_Data("사용자");
+		result = RSP(Com, You);
+		i = WOL(Pc, User, result);	
 	}
-	if (Pc == 3 || (Pc == 2 && User == 0)) cout << "게임 패배..." << endl;
-	else if (User == 3 || (Pc == 0 && User == 2)) cout << "게임 승리..!" << endl;
-	else cout << "게임 오류..!" << endl;
 }
