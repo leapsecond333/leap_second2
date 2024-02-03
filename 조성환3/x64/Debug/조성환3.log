@@ -1,0 +1,4 @@
+﻿  조성환3.cpp
+C:\CookC\조성환3\조성환3.cpp(20,36): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\CookC\조성환3\조성환3.cpp(58,37): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  조성환3.vcxproj -> C:\CookC\조성환3\x64\Debug\조성환3.exe
