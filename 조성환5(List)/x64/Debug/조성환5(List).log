@@ -1,3 +1,2 @@
-﻿  조성환(List).cpp
-C:\CookC\조성환5(List)\조성환(List).cpp(84,27): warning C4101: 'next_n' :참조되지 않은 지역 변수입니다.
+﻿  double linked list.cpp
   조성환5(List).vcxproj -> C:\CookC\조성환5(List)\x64\Debug\조성환5(List).exe
