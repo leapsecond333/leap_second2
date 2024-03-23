@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 
 using namespace std;
 
@@ -43,22 +43,23 @@ node* push_front(node* n, int data) {
 	return new_n;
 }
 
-void insert_data(node* n, int forward_data, int data) {
-	node* new_n, * forward_n, * another_n;
+void insert_data(node* n, int prior_data, int data) {
+	node* new_n, * prior_n;
 	new_n = new node;
 	new_n->data = data;
-	forward_n = n;
-	int position = forward_data;
+	prior_n = n;
+	int position = prior_data;
 
 	for (int i = 0; i < position; i++) {
-		another_n = n;
+		prior_n = n;
 		n = n->next;
 	}
 
+	n->prev = prior_n;
 	new_n->next = n;
 	n->prev = new_n;
-	forward_n->next = new_n;
-	new_n->prev = forward_n;
+	prior_n->next = new_n;
+	new_n->prev = prior_n;
 }
 
 void pop_data(node* m, int data) {
@@ -77,7 +78,6 @@ void pop_data(node* m, int data) {
 	next_n = present_n->next;
 	next_n->prev = prev_n;
 	prev_n->next = next_n;
-	PrintNode(m);
 	delete present_n;
 }
 
@@ -126,4 +126,4 @@ int main()
 	
 	PrintNode(n);
 	cout << endl;
-}
+}*/
