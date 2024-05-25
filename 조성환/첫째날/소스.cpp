@@ -579,20 +579,330 @@
 //	}
 //}
 
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int appetizer, mainDish, dessert;
+//	printf("appetizer 1.캐비어 2.샐러드 3.푸아그라\n");
+//	scanf("%d", &appetizer);
+//	printf("appetizer 1.스테이크 2.생선요리 3.양갈비\n");
+//	scanf("%d", &mainDish);
+//	printf("appetizer 1.케잌 2.아이스크림 3.초콜릿무스\n");
+//	scanf("%d", &dessert);
+//	printf("주문한 음식은 ");
+//	switch (appetizer) {
+//	case 1: printf("캐비어, ");	break;
+//	case 2: printf("샐러드, ");	break;
+//	case 3: printf("푸아그라, ");	break;
+//	}
+//	switch (mainDish) {
+//	case 1: printf("스테이크, ");	break;
+//	case 2: printf("생선요리, ");	break;
+//	case 3:	printf("양갈비, ");	break;
+//	}
+//	switch (dessert) {
+//	case 1: printf("케잌");	break;
+//	case 2: printf("아이스크림");	break;
+//	case 3: printf("초콜릿무스");	break;
+//	}
+//	printf("입니다");
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int i = 0;
+//	while (i < 6)
+//	{
+//		printf("C");
+//		i++;
+//	}
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int i = -10;
+//	while (i <= 0)
+//	{
+//		printf("%d ", i);
+//		i++;
+//	}
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int i = 0;
+//	while (i <= 100) {
+//		if (i % 5 == 0) printf("%d ", i);
+//		i++;
+//	}
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int number = 1, multi = 1;
+//	while (1) {
+//		multi *= number;
+//		if (multi >= 50000) break;
+//		number++;
+//	}
+//	printf("%d", number);
+//}
+
+//#include <stdio.h>
+
+//int main()
+//{
+//	char ch = 'A';
+//	while (ch <= 'Z')
+//	{
+//		if (ch != 'F') 
+//			printf("%c ", ch);
+//		ch++;
+//	}
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int input = 0, b = 0, number = 0, order = 0;
+//	while (1)
+//	{
+//		printf("%c : ", 'A' + order);
+//		//order = ++order % 2;
+//		scanf("%d", &input);
+//		if (input< 1 || input  >3)
+//		{
+//			printf("다시 입력해주세요.\n");
+//			continue;
+//		}
+//		number += input;
+//		printf("%d\n", number);
+//		if (number >= 31)
+//		{
+//			break;
+//		}
+//		order = !order;
+//	}
+//	printf("%c 패배", 'A' + order);
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int select = 0;
+//	do {
+//		printf("1. 로그인\n2. 회원가입\n3. 옵션\n4. 만든 사람들\n");
+//		scanf("%d", &select);
+//	} while (select >= 1 && select <= 4);
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <time.h>>
+//
+//int main()
+//{
+//	srand((unsigned int)time(NULL));
+//	int command;
+//	int game_play;
+//	int day = 0;
+//	int study = 0;
+//	int minecraft_info = 0;
+//	int exercise = 0;
+//	do {
+//		printf("\n%d번째 날!\n", ++day);
+//		printf("오늘은 뭘 할까요?\n");
+//		printf("1.코딩 공부한다.\n");
+//		printf("2.마인크래프트를 한다.\n");
+//		printf("3.공원으로 운동하러간다.\n");
+//		printf("4.잔다.\n");
+//		printf("그외. 면접 준비하기.\n");
+//		scanf("%d", &command);
+//		if (command < 1 && command > 4) break;
+//		if (command == 1)
+//		{
+//			int randInt = rand() % 5 + 1;
+//			switch (randInt) {
+//			case 1:
+//				printf("기분이 좋네요.\n");
+//			case 3:
+//				printf("도서관에서 ");
+//				break;
+//			case 2:
+//				printf("기분이 나빠요.\n");
+//			case 4:
+//				printf("카페에서 ");
+//				break;
+//			case 5:	printf("학원에서 ");
+//			}
+//			printf("코딩 공부합니다\n");
+//			study++;
+//		}
+//		else if (command == 2)
+//		{
+//			printf("마인크래프트를 어떻게 하실겁니까?\n");
+//			printf("1.마인크래프트에 대한 정보를 알아보며 즐긴다.\n");
+//			printf("2.그냥 마인크래프트를 즐긴다.\n");
+//			scanf("%d", &game_play);
+//			switch (game_play) {
+//			case 1:
+//				printf("마인크래프트에 대한 전문지식이 늘었습니다.\n");
+//				minecraft_info++;
+//				break;
+//			case 2:
+//				printf("마인크래프트를 즐겼습니다.\n");
+//				break;
+//			}
+//		}
+//		else if (command == 3)
+//		{
+//			printf("공원에서 운동을 열심히 하였습니다.\n");
+//			exercise++;
+//		}
+//		else if (command == 4)
+//		{
+//			printf("잠을 잤습니다.\n");
+//		}
+//	} while (command >= 1 && command <= 4);
+//
+//
+//	if (day <= 3) {
+//		printf("이룬게 없습니다...\n");
+//		return 0;
+//	}
+//
+//	int ending = 0;
+//	printf("어떤 직업을 준비할 것 입니까?\n");
+//	printf("1.프로그래머로 면접 준비하기.\n");
+//	printf("2.마이크로소프트에 마인크래프트 관련된 면접 준비하기.\n");
+//	printf("3.운동선수가 되기위해 준비하기.\n");
+//	printf("4.백수가 될래...\n");
+//	scanf("%d", &ending);
+//
+//	if (ending == 1)
+//	{
+//		int level = study / 4;
+//		switch (level)
+//		{
+//		case 0:
+//			printf("코딩새싹이므로 면접을 통과하기 못했습니다!\n");
+//			break;
+//		case 1:
+//			printf("프로그래머가 되었습니다!\n");
+//			break;
+//		case 2:
+//			printf("FrontEnd 개발자가 되었습니다!\n");
+//			break;
+//		case 3:
+//			printf("BackEnd 개발자가 되었습니다!\n");
+//			break;
+//		default:
+//			printf("풀스택 개발자가 되었습니다!\n");
+//			break;
+//		}
+//	}
+//	else if (ending == 2)
+//	{
+//		int level = study / 8 + minecraft_info / 8;
+//		switch (level)
+//		{
+//		case 0:
+//			printf("면접에서 떨어졌습니다!\n");
+//			printf("백수가 되었습니다!\n");
+//			break;
+//		default:
+//			printf("마인크래프트와 관련된 마이크로소프트에 취직했습니다!\n");
+//			break;
+//		}
+//	}
+//	else if (ending == 3)
+//	{
+//		int level = exercise / 8;
+//		switch (level)
+//		{
+//		case 0:
+//			printf("그 어떤 종목의 운동선수가 되어지지 못했습니다!\n");
+//			printf("백수가 되었습니다!\n");
+//			break;
+//		case 1:
+//			printf("되기 어려운 종목의 운동선수가 되었습니다!\n");
+//			break;
+//		default:
+//			printf("어떤 종목의 국가 대표 운동선수가 되었습니다!\n");
+//			break;
+//		}
+//	}
+//	else if (ending == 4)
+//	{
+//		printf("백수가 되었습니다!\n");
+//	}
+//
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int sheep;
+//	for (sheep = 1; sheep <= 50; sheep++) {
+//		if (sheep % 10 == 0) {
+//			printf("졸았다!\n");
+//			continue;
+//		}
+//		printf("양 %d마리\n", sheep);
+//		if (sheep == 45) {
+//			break;
+//		}
+//	}
+//	printf("잠들었다!\n");
+//	return 0;
+//}
+
+//#include <stdio.h>
+
+//int main()
+//{
+//	int count;
+//	for (count = 10; count <= 99; count++)
+//		printf("%d ", count);
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int count, number = 1;
+//	for (count = 3; count <= 8; count++)
+//	{
+//		number *= count;
+//	}
+//	printf("%d", number);
+//}
+
 #include <stdio.h>
 
 int main()
 {
-	int appetizer, mainDish, dessert;
-	printf("appetizer 1.캐비어 2.샐러드 3.푸아그라");
-	scanf("%d", &appetizer);
-	printf("appetizer 1.스테이크 2.생선요리 3.양갈비");
-	scanf("%d", &mainDish);
-	printf("appetizer 1.케잌 2.아이스크림 3.초콜릿무스");
-	scanf("%d", &dessert);
-	switch (appetizer) {
-	case 1: printf("캐비어");
-	case 2: printf("샐러드");
-	case 3: printf("푸아그라");
+	int count;
+	for (count = 1; count <= 50; count++)
+	{
+		int num1 = count % 10;
+		int num10 = count / 10;
+
+		if((num1 && num1%3==0) || (num10 && num10 % 3 == 0))
+			printf("%d ", count);
+		//if (count % 10 == 3 || count % 10 == 6 || count % 10 == 9 || count / 10 == 3)
 	}
 }
